@@ -1,0 +1,8 @@
+iset_rades_gestion_colis:
+    resource: "@IsetRadesGestionColisBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

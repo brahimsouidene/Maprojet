@@ -1,0 +1,9 @@
+iset_rades_gestion_colis_homepage:
+    path:     /
+    defaults: { _controller: IsetRadesGestionColisBundle:Default:index }
+Colis_add:
+    path:     /colis/add_colis
+    defaults: { _controller: IsetRadesGestionColisBundle:Colis:AjoutColis }
+Client_add:
+    path:     /client/add_client
+    defaults: { _controller: IsetRadesGestionColisBundle:Client:AjoutClient}
