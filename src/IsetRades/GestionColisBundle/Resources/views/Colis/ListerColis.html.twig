@@ -1,0 +1,23 @@
+{# empty Twig template #}
+{%block body %}
+    <table border="2">
+        <caption> <h2>Lister des colis</h2></caption>
+        <tr>
+            <th>Code</th>
+            <th>Poids</th>
+            <th>Prix</th>
+            {#<th>Date creation</th>#}
+            <th>Etat</th>
+        </tr>
+        {% for colis in LesColis%}
+            <tr>
+                <td>{{colis.id}}</td>
+                <td>{{colis.Poids}}</td>
+                <td>{{colis.prixPayer}}</td>
+                
+                {#<td>{{colis.dateCreation}}</td>#}
+                <td>{{colis.etat}}</td>
+            </tr>
+        {%endfor%}
+        </table>
+{% endblock%}

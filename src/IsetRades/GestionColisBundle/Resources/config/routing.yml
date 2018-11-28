@@ -7,3 +7,9 @@ Colis_add:
 Client_add:
     path:     /client/add_client
     defaults: { _controller: IsetRadesGestionColisBundle:Client:AjoutClient}
+Colis_recherchColis:
+    path:     /colis/recherche_colis/{$code}
+    defaults: { _controller: IsetRadesGestionColisBundle:Colis:RechercheColis}
+Colis_lister:
+    path:     /colis/lister_colis
+    defaults: { _controller: IsetRadesGestionColisBundle:Colis:ListerColis}

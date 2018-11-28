@@ -62,7 +62,7 @@ class Colis
      *
      * @return int
      */
-    public function getCodeColis()
+    public function getId()
     {
         return $this->id;
     }
@@ -74,7 +74,7 @@ class Colis
      *
      * @return Colis
      */
-    public function setCodeColis($code) {
+    public function setId($code) {
         $this->id=$code;
     }
     

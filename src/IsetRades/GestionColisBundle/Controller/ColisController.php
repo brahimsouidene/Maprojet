@@ -49,6 +49,28 @@ class ColisController extends Controller{
         //on red la vue
         return $this->render('colisAdd.html.twig',array('form'=>$formView));
     }
+     public function ListerColisAction()
+    {
+        $doctrine=$this->getDoctrine();
+        $repos=$doctrine->getRepository('IsetRadesGestionColisBundle:Colis');
+        $Lescolis=$repos->findAll();
+        
+        //$lescolis esttableau auto d'objets
+        return $this->render('IsetRadesGestionColisBundle:Colis:ListerColis.html.twig',
+                array('LesColis'=>$Lescolis));
+     
+    }
+    public function RechercheColisAction($code) {
+     $doctrine=$this->getDoctrine();
+     $repos=$doctrine->getRepository('IsetRadesGestionColisBundle:Colis');
+    $col=$repos->find($code);
+    
+    //$col est un objet de la classe colis  :::j aurai le saraire que  
+    return $this->render('IsetRadesGestionColisBundle:Colis:RechercheColis.html.twig',
+            array('colis'=>$col));
+             
+    }
+     
 
   
 
